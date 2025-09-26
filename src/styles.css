@@ -1,0 +1,192 @@
+body {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(0,0,0,0.7);
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s forwards;
+}
+
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.4s; }
+.card:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    box-shadow: 0 4px 24px 0 #ffd70099;
+    transform: scale(1.03);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 2px solid #ffd700;
+}
+
+.card h3 {
+    margin: 0 0 8px 0;
+    color: #ffd700;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 30px 0 10px 0;
+}
+
+.nav-buttons button {
+    background: linear-gradient(90deg, #2196f3 0%, #21cbf3 100%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 36px;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 12px #2196f355;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.nav-buttons button:hover, .nav-buttons button:focus {
+    background: linear-gradient(90deg, #21cbf3 0%, #2196f3 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 24px #21cbf399;
+}
+
+.rocket-btn {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    animation: rocket-float 2s infinite ease-in-out;
+    transition: transform 0.2s;
+    padding: 0;
+}
+
+.rocket-btn svg {
+    filter: drop-shadow(0 2px 8px #2196f3aa);
+    transition: transform 0.8s cubic-bezier(0.4,1.5,0.5,1), opacity 0.8s;
+}
+
+.rocket-btn.lift-off svg {
+    transform: translateY(-600px) scale(1.2) rotate(-10deg);
+    opacity: 0;
+}
+
+.rocket-btn:hover {
+    transform: scale(1.15) rotate(-10deg);
+}
+
+@keyframes rocket-float {
+    0%, 100% { transform: translateY(0);}
+    50% { transform: translateY(-12px);}
+}
+
+@media (max-width: 600px) {
+    .nav-buttons button {
+        padding: 10px 18px;
+        font-size: 1em;
+    }
+    .rocket-btn {
+        right: 12px;
+        bottom: 12px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: rgba(0,0,0,0.7);
+    margin-top: 40px;
+    font-size: 0.95em;
+}
+
+/* Декоративні елементи на фоні: зірки, ракети, планети */
+.bg-decor {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: twinkle 2s infinite alternate;
+}
+.star.s1 { width: 2px; height: 2px; left: 10%; top: 20%; animation-delay: 0s;}
+.star.s2 { width: 3px; height: 3px; left: 80%; top: 30%; animation-delay: 0.5s;}
+.star.s3 { width: 1.5px; height: 1.5px; left: 60%; top: 70%; animation-delay: 1s;}
+.star.s4 { width: 2.5px; height: 2.5px; left: 30%; top: 80%; animation-delay: 1.5s;}
+.star.s5 { width: 2px; height: 2px; left: 50%; top: 10%; animation-delay: 0.7s;}
+.star.s6 { width: 1.5px; height: 1.5px; left: 90%; top: 60%; animation-delay: 1.2s;}
+.star.s7 { width: 2px; height: 2px; left: 20%; top: 60%; animation-delay: 0.3s;}
+.star.s8 { width: 2.5px; height: 2.5px; left: 70%; top: 50%; animation-delay: 1.7s;}
+
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}

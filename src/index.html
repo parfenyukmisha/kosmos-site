@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космос і його елементи</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Декоративний фон: зірки -->
+    <div class="bg-decor">
+        <div class="star s1"></div>
+        <div class="star s2"></div>
+        <div class="star s3"></div>
+        <div class="star s4"></div>
+        <div class="star s5"></div>
+        <div class="star s6"></div>
+        <div class="star s7"></div>
+        <div class="star s8"></div>
+    </div>
+    <header>
+        <h1>Ласкаво просимо до світу космосу!</h1>
+        <div class="nav-buttons">
+            <button onclick="scrollToSection('planets')">Планети</button>
+            <button onclick="scrollToSection('stars')">Зірки</button>
+            <button onclick="scrollToSection('galaxies')">Галактики</button>
+        </div>
+    </header>
+    <main>
+        <section id="planets">
+            <h2>Планети</h2>
+            <div class="card">
+                <img src="images/earth.jpg" alt="Земля" loading="lazy">
+                <div>
+                    <h3>Земля</h3>
+                    <p>Єдина відома планета, на якій існує життя. Має багатий біорізноманітний світ та унікальну атмосферу.</p>
+                    <ul>
+                        <li>Діаметр: 12 742 км</li>
+                        <li>Відстань до Сонця: 149,6 млн км</li>
+                        <li>Має один природний супутник — Місяць</li>
+                        <li>Атмосфера: азот, кисень, аргон</li>
+                        <li>Вік: ~4,54 млрд років</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/mars.jpg" alt="Марс" loading="lazy">
+                <div>
+                    <h3>Марс</h3>
+                    <p>Червона планета, яку часто досліджують космічні апарати. Можливо, у минулому на Марсі була вода.</p>
+                    <ul>
+                        <li>Діаметр: 6 779 км</li>
+                        <li>Відстань до Сонця: 227,9 млн км</li>
+                        <li>Має два супутники: Фобос і Деймос</li>
+                        <li>Атмосфера: вуглекислий газ, азот</li>
+                        <li>Відомі пилові бурі</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/jupiter.jpg" alt="Юпітер" loading="lazy">
+                <div>
+                    <h3>Юпітер</h3>
+                    <p>Найбільша планета Сонячної системи, газовий гігант із потужною магнітосферою.</p>
+                    <ul>
+                        <li>Діаметр: 139 820 км</li>
+                        <li>Відстань до Сонця: 778,5 млн км</li>
+                        <li>Має понад 80 супутників</li>
+                        <li>Відомий Велика червона пляма — гігантський шторм</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/saturn.jpg" alt="Сатурн" loading="lazy">
+                <div>
+                    <h3>Сатурн</h3>
+                    <p>Відома своїми кільцями планета-гігант, друга за розміром у Сонячній системі.</p>
+                    <ul>
+                        <li>Діаметр: 116 460 км</li>
+                        <li>Відстань до Сонця: 1,43 млрд км</li>
+                        <li>Має понад 80 супутників</li>
+                        <li>Кільця складаються з льоду та каміння</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="stars">
+            <h2>Зірки</h2>
+            <div class="card">
+                <img src="images/sun.jpg" alt="Сонце" loading="lazy">
+                <div>
+                    <h3>Сонце</h3>
+                    <p>Найближча до Землі зірка, джерело світла та енергії для всієї Сонячної системи.</p>
+                    <ul>
+                        <li>Тип: Жовтий карлик</li>
+                        <li>Вік: ~4,6 млрд років</li>
+                        <li>Температура поверхні: ~5 500°C</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/betelgeuse.jpg" alt="Бетельгейзе" loading="lazy">
+                <div>
+                    <h3>Бетельгейзе</h3>
+                    <p>Одна з найяскравіших зірок у сузір'ї Оріона, червоний надгігант.</p>
+                    <ul>
+                        <li>Відстань від Землі: ~642 світлових роки</li>
+                        <li>Радіус: у 900 разів більший за Сонце</li>
+                        <li>Може вибухнути як наднова у майбутньому</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/sirius.jpg" alt="Сіріус" loading="lazy">
+                <div>
+                    <h3>Сіріус</h3>
+                    <p>Найяскравіша зірка нічного неба, розташована у сузір'ї Великого Пса.</p>
+                    <ul>
+                        <li>Відстань від Землі: 8,6 світлових років</li>
+                        <li>Складається з двох зірок: Сіріус A і Сіріус B</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="galaxies">
+            <h2>Галактики</h2>
+            <div class="card">
+                <img src="images/milkyway.jpg" alt="Чумацький Шлях" loading="lazy">
+                <div>
+                    <h3>Чумацький Шлях</h3>
+                    <p>Галактика, у якій знаходиться наша Сонячна система. Містить сотні мільярдів зірок.</p>
+                    <ul>
+                        <li>Діаметр: ~100 000 світлових років</li>
+                        <li>Кількість зірок: 100–400 млрд</li>
+                        <li>Має спіральну структуру</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/andromeda.jpg" alt="Андромеда" loading="lazy">
+                <div>
+                    <h3>Андромеда</h3>
+                    <p>Найближча до Чумацького Шляху велика галактика, яку можна побачити неозброєним оком.</p>
+                    <ul>
+                        <li>Відстань від Землі: ~2,5 млн світлових років</li>
+                        <li>Діаметр: ~220 000 світлових років</li>
+                        <li>Має понад трильйон зірок</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/whirlpool.jpg" alt="Вир" loading="lazy">
+                <div>
+                    <h3>Галактика Вир (М51)</h3>
+                    <p>Одна з найвідоміших спіральних галактик, розташована у сузір'ї Гончих Псів.</p>
+                    <ul>
+                        <li>Відстань від Землі: ~23 млн світлових років</li>
+                        <li>Відома своєю чіткою спіральною структурою</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Космос і його елементи</p>
+    </footer>
+    <!-- Ракета для скролу вгору -->
+    <button class="rocket-btn" onclick="rocketLiftOff()" title="Вгору" id="rocketBtn">
+        <svg width="56" height="56" viewBox="0 0 56 56">
+            <!-- Тіло ракети -->
+            <ellipse cx="28" cy="48" rx="10" ry="5" fill="#bbb"/>
+            <rect x="24" y="28" width="8" height="16" rx="4" fill="#ff9800"/>
+            <polygon points="28,6 38,36 28,32 18,36" fill="#fff" stroke="#2196f3" stroke-width="2"/>
+            <circle cx="28" cy="20" r="6" fill="#2196f3" stroke="#1976d2" stroke-width="2"/>
+            <!-- Вогонь -->
+            <polygon class="fire" points="28,44 32,56 28,52 24,56" fill="#ffd700"/>
+        </svg>
+    </button>
+    <script>
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            if(section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        function rocketLiftOff() {
+            const btn = document.getElementById('rocketBtn');
+            btn.classList.add('lift-off');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => btn.classList.remove('lift-off'), 900);
+        }
+    </script>
+</body>
+</html>
